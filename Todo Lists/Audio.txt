@@ -1,0 +1,36 @@
+Music:
+In Game
+Character Select
+Main Menu
+(Stretch):
+In Game 2
+In Game 3
+
+Characters:
+Billy bob Obrian:
+-Selected on charcter select
+-Gets hit
+-Dies
+-Gets hit 2
+-Wins
+
+Wild William
+-Selected on charcter select
+-Gets hit
+-Dies
+-Gets hit 2
+-Wins
+
+Sal
+-Selected on charcter select
+-Gets hit
+-Dies
+-Gets hit 2
+-Wins
+
+Hughbert
+-Selected on charcter select
+-Gets hit
+-Dies
+-Gets hit 2
+-Wins
