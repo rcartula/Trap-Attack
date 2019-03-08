@@ -11,6 +11,11 @@ Draw:
 9. Cheetah (Faster Shot Speed)
 10. Baby Bear (Tracking Shot)
 
+Background (forest)
+Stretch
+Background (icy)
+Background (Swamp)
+
 Bear Poo (Mines)
 Bear Traps (Bear Traps)
 
