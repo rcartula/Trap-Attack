@@ -13,3 +13,67 @@ Draw:
 
 Bear Poo (Mines)
 Bear Traps (Bear Traps)
+
+Characters:
+Billy Bob O'Brian:
+Front
+Back
+Idle 1
+Idle 2
+Throwing Front 1
+Throwing Front 2
+Throwing Back 1
+Throwing Back 2
+Place Rock
+Hold a Turtle As A Shield
+Dead
+Celebrate Pose
+Simple Dodge Roll
+
+Wild William:
+Front
+Back
+Idle 1
+Idle 2
+Throwing Front 1
+Throwing Front 2
+Throwing Back 1
+Throwing Back 2
+Place Rock
+Hold a Turtle As A Shield
+Dead
+Celebrate Pose
+Simple Dodge Roll
+
+(Stretch) Sal:
+Front
+Back
+Idle 1
+Idle 2
+Throwing Front 1
+Throwing Front 2
+Throwing Back 1
+Throwing Back 2
+Place Rock
+Hold a Turtle As A Shield
+Dead
+Celebrate Pose
+Simple Dodge Roll
+
+(Stretch) Hughbert:
+Front
+Back
+Idle 1
+Idle 2
+Throwing Front 1
+Throwing Front 2
+Throwing Back 1
+Throwing Back 2
+Place Rock
+Hold a Turtle As A Shield
+Dead
+Celebrate Pose
+Simple Dodge Roll
+
+Stretch:
+Portait for character select
