@@ -1,0 +1,24 @@
+to do:
+player scripts:
+1. (DONE) player 1 and 2 control, move in 4 directions and 6 buttons to fire, has 10 health and 1 or 3 lives
+2. prefab placeholders for weapons
+	1. weak weapons: infinite ammo, power-ups give a random weapon, start with weapon 1
+		1. (DONE) basic shot: 1 damage, moderate fire rate and projectile speed
+		2. (DONE) spread shot: 1 damage per pellet, slow fire rate and moderate projectile speed, shoots 3-5 projectiles
+		3. (DONE) fast shot: 1 damage, lower fire rate, fast projectile speed
+		4. tracking shot:1 damage, slow fire rate and projectile speed, projectile follows the target
+		5. machine gun: 1 damage, fast fire rate, lower projectile speed 
+	2. strong weapons: powerful weapons that deal various damage or status effects, limited ammo, gained by power-ups and picking a new one replaces old ones
+		1. missle: 5 damage, 2-3 ammo, slower projectile speed and fire rate
+		2. slow shot: 1 damage, 1 ammo, either causes a cirlce of slowing or direclty slows the enemy for a time
+		3. weapon disable: 1 damage, 1 ammo, disables the enemys weapon for a short time
+		4. tree destroyer: 0 damage, 1-2 ammo, destroys tree objects on the map
+	3. traps: placeable items that cause various effects, gained by power-up with limited ammo
+		1. mines
+		2. bear traps
+		3. slow mine
+	4. defenses
+3. (DONE) projectile mover: modular value for the speed of a projectile 
+4. game controller: allows for win conditions, resarting, quiting, controls UI, spawn power-ups
+5. power-ups: 3 diffrent power-ups that give a random weapond type from weak, strong or traps
+6. contact script:causes projectiles to be destroyed when colliding with each other, objects or exiting the field
