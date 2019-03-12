@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Player2Control.cs" />
     <Compile Include="Assets\Scripts\ProjectileMover.cs" />
     <Compile Include="Assets\Scripts\ShieldMechanics.cs" />
+    <Compile Include="Assets\Scripts\TreeMechanics.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Program Files (x86)/unity/unity games/Trap-Attack/Group_Project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

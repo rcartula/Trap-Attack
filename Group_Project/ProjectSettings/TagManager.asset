@@ -7,6 +7,9 @@ TagManager:
   - BasicBolt
   - PowerUp
   - Slow
+  - SPowerUp
+  - missle
+  - TreeBreak
   layers:
   - Default
   - TransparentFX
