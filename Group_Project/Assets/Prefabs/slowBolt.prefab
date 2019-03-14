@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 54867287644033074}
   - component: {fileID: 114181514095329566}
   - component: {fileID: 65964948935223274}
+  - component: {fileID: 114538200007835260}
   m_Layer: 0
   m_Name: slowBolt
   m_TagString: Slow
@@ -88,7 +89,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 487f3e9262398c04c9b8c1ecd7e5764e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -154,3 +155,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+--- !u!114 &114538200007835260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1328270961050534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feabb4c4842ae4548a3fe69e13d51208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -2,10 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class Boundary2
+{
+    public float xMin, xMax, zMin, zMax;
+}
+
 public class Player2Control : MonoBehaviour
 {
-    public float speed;
+    private float speed = 15;
     public int health;
+    public Boundary boundary;
+    public int nextdodge;
 
     public GameObject basicshot;
     public GameObject fastshot;
@@ -21,20 +29,26 @@ public class Player2Control : MonoBehaviour
     private float basicnextFire;
 
     public GameObject slowBolt;
+    public GameObject missle;
+    public GameObject treebreak;
+    public GameObject disable;
     public float slowFireRate;
+    public float missleFireRate;
     private float strongnextFire;
 
     private int range;
     private int range2;
+    private int SAmmo;
     private Rigidbody rb;
-    private float counter = 0;
 
     private bool basicshotactive;
     private bool spreadshotactive;
     private bool fastshotactive;
     private bool machineshotactive;
-    private bool slowactive;
     private bool slowammoactive;
+    private bool missleammoactive;
+    private bool treeBreakammoactive;
+    private bool disableammoactive;
 
 
     // Use this for initialization
@@ -45,8 +59,10 @@ public class Player2Control : MonoBehaviour
         spreadshotactive = false;
         fastshotactive = false;
         machineshotactive = false;
-        slowactive = false;
-        slowammoactive = true;
+        slowammoactive = false;
+        missleammoactive = false;
+        disableammoactive = false;
+        treeBreakammoactive = false;
     }
 
     // Update is called once per frame
@@ -61,7 +77,16 @@ public class Player2Control : MonoBehaviour
 
         Vector3 movement = new Vector3(movehorizontal, 0.0f, movevertical);
         rb.velocity = (movement * speed);
-
+        rb.position = new Vector3
+(
+Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
+0.0f,
+Mathf.Clamp(rb.position.z, boundary.zMin, boundary.zMax)
+);
+        if (Input.GetButton("Fire4P1") && Time.time > nextdodge)
+        {
+            StartCoroutine(Dodgeactive());
+        }
         if (basicshotactive)
         {
             if (Input.GetButton("Fire1P2") && Time.time > basicnextFire)
@@ -96,16 +121,6 @@ public class Player2Control : MonoBehaviour
                 Instantiate(basicshot, spreadshotSpawn3.position, spreadshotSpawn3.rotation);
             }
         }
-        if (slowactive)
-        {
-            counter += Time.deltaTime;
-            if (counter >= 5)
-            {
-                speed += 10;
-                slowactive = false;
-                counter = 0;
-            }
-        }
         if (slowammoactive)
         {
             {
@@ -116,10 +131,55 @@ public class Player2Control : MonoBehaviour
                 }
             }
         }
+        if (missleammoactive)
+        {
+            {
+                if (Input.GetButton("Fire2P2") && Time.time > strongnextFire)
+                {
+                    SAmmo -= 1;
+                    strongnextFire = Time.time + missleFireRate;
+                    Instantiate(missle, basicshotSpawn.position, basicshotSpawn.rotation);
+                    if (SAmmo == 0)
+                    {
+                        missleammoactive = false;
+                    }
+                }
+            }
+        }
+        if (treeBreakammoactive)
+        {
+            {
+                if (Input.GetButton("Fire2P2") && Time.time > strongnextFire)
+                {
+                    SAmmo -= 1;
+                    strongnextFire = Time.time + slowFireRate;
+                    Instantiate(treebreak, basicshotSpawn.position, basicshotSpawn.rotation);
+                    if (SAmmo == 0)
+                    {
+                        treeBreakammoactive = false;
+                    }
+                }
+            }
+        }
+        if (disableammoactive)
+        {
+            {
+                if (Input.GetButton("Fire2P2") && Time.time > strongnextFire)
+                {
+                    SAmmo -= 1;
+                    strongnextFire = Time.time + slowFireRate;
+                    Instantiate(disable, basicshotSpawn.position, basicshotSpawn.rotation);
+                    if (SAmmo == 0)
+                    {
+                        disableammoactive = false;
+                    }
+                }
+            }
+        }
     }
     void OnTriggerEnter(Collider other)
     {
-        if (health <= 0)
+        if (health == 0)
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
@@ -134,8 +194,23 @@ public class Player2Control : MonoBehaviour
         {
             Destroy(other.gameObject);
             health -= 1;
-            speed -= 10;
-            slowactive = true;
+            StartCoroutine(Slowed());
+        }
+        if (other.tag == "missle")
+        {
+            Destroy(other.gameObject);
+            health -= 5;
+        }
+        if (other.tag == "TreeBreak")
+        {
+            Destroy(other.gameObject);
+            health -= 2;
+        }
+        if (other.tag == "Disable")
+        {
+            Destroy(other.gameObject);
+            health -= 2;
+            StartCoroutine(Disablegun());
         }
         if (other.tag == "PowerUp")
         {
@@ -168,20 +243,78 @@ public class Player2Control : MonoBehaviour
                 spreadshotactive = false;
                 fastshotactive = false;
                 machineshotactive = true;
-                if (machineshotactive == true)
-                {
-                    Debug.Log("It's true!");
-                }
             }
         }
         if (other.tag == "SPowerUp")
         {
             range2 = Random.Range(0, 4);
             Destroy(other.gameObject);
-            if (range == 0)
+            if (range2 == 0)
             {
-
+                SAmmo = 2;
+                slowammoactive = true;
+                missleammoactive = false;
+                disableammoactive = false;
+                treeBreakammoactive = false;
+            }
+            if (range2 == 1)
+            {
+                SAmmo = 3;
+                slowammoactive = false;
+                missleammoactive = true;
+                disableammoactive = false;
+                treeBreakammoactive = false;
+            }
+            if (range2 == 2)
+            {
+                SAmmo = 2;
+                slowammoactive = false;
+                missleammoactive = false;
+                disableammoactive = false;
+                treeBreakammoactive = true;
+            }
+            if (range2 == 3)
+            {
+                SAmmo = 2;
+                slowammoactive = false;
+                missleammoactive = false;
+                disableammoactive = true;
+                treeBreakammoactive = false;
             }
         }
+    }
+    public IEnumerator Dodgeactive()
+    {
+        speed = 55;
+        yield return new WaitForSeconds(.1f);
+        speed = 15;
+    }
+    public IEnumerator Slowed()
+    {
+        basicnextFire = 2;
+        speed = 7;
+        yield return new WaitForSeconds(5f);
+        speed = 15;
+    }
+    public IEnumerator Disablegun()
+    {
+        basicshotactive = false;
+        missleammoactive = false;
+        spreadshotactive = false;
+        fastshotactive = false;
+        machineshotactive = false;
+        slowammoactive = false;
+        disableammoactive = false;
+        treeBreakammoactive = false;
+        yield return new WaitForSeconds(2f);
+        basicshotactive = true;
+        missleammoactive = true;
+        spreadshotactive = false;
+        fastshotactive = false;
+        machineshotactive = false;
+        slowammoactive = false;
+        disableammoactive = false;
+        treeBreakammoactive = false;
+        SAmmo = 1;
     }
 }

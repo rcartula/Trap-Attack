@@ -9,19 +9,20 @@ player scripts:
 		4. tracking shot:1 damage, slow fire rate and projectile speed, projectile follows the target
 		5. (DONE) machine gun: 1 damage, fast fire rate, lower projectile speed 
 	2. strong weapons: powerful weapons that deal various damage or status effects, limited ammo, gained by power-ups and picking a new one replaces old ones
-		1. (DONE) missle: 5 damage, 2-3 ammo, slower projectile speed and fire rate
+		1. (DONE) missle: 5 damage, 3 ammo, slower projectile speed and fire rate
 		2. (DONE) slow shot: 1 damage, 1 ammo, direclty slows the enemy for a time
-		3. weapon disable: 1 damage, 1 ammo, disables the enemys weapon for a short time
-		4. tree destroyer: 0 damage, 1-2 ammo, destroys tree objects on the map
+		3. (DONE) weapon disable: 1 damage, 1 ammo, disables the enemys weapon for a short time, resets weapons
+		4. (DONE) tree destroyer: 2 damage, 1-2 ammo, destroys tree objects on the map
+		5. orbital: rotates around the player and deals constant damage
 	3. traps: placeable items that cause various effects, gained by power-up with limited ammo, thrown item that launches at a distance
 		1. mines: 3 damage, placeable bomb that causes damage when someone steps on it
 		2. bear traps: 1 damage, placeable trap that immobilizes whoever steps on it
 		3. slow mine: 2 damage, trap that slows whoever activates it for a time
 	4. defenses
-		1. shield: 5 health, a shield that will follow the player and allows the usage of weapons
-		2. cover: 5 health, placeable cover that can be placed in multiple directions
+		1. shield: 5 health, a shield that will follow the player and allows the usage of weapons, timed cooldown
+		2. cover: 5 health, placeable cover that can be placed in multiple directions, timed cooldown seperate from shield
 	5. (DONE) dodge: ability on a cooldown which increases speed for a short time
 3. (DONE) projectile mover: modular value for the speed of a projectile 
 4. game controller: allows for win conditions, resarting, quiting, controls UI, spawn power-ups
-5. power-ups: 3 diffrent power-ups that give a random weapond type from weak, strong or traps
-6. contact script:causes projectiles to be destroyed when colliding with each other, objects or exiting the field
+5. (DONE) power-ups: 3 diffrent power-ups that give a random weapond type from weak, strong or traps
+6. contact script:causes projectiles to be destroyed when colliding with each other, objects or exiting the field -- issue currently cannot consistently break bolts

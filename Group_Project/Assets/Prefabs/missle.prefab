@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 54860138824745470}
   - component: {fileID: 114980751770444114}
   - component: {fileID: 65564577911313924}
+  - component: {fileID: 114702799217984328}
   m_Layer: 0
   m_Name: missle
   m_TagString: missle
@@ -88,7 +89,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 17d7ddc788eff8a458ced9fe1927fe29, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -142,6 +143,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114702799217984328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1337255616646308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feabb4c4842ae4548a3fe69e13d51208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114980751770444114
 MonoBehaviour:
   m_ObjectHideFlags: 1
