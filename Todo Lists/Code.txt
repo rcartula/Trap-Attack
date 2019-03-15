@@ -23,6 +23,6 @@ player scripts:
 		2. cover: 5 health, placeable cover that can be placed in multiple directions, timed cooldown seperate from shield
 	5. (DONE) dodge: ability on a cooldown which increases speed for a short time
 3. (DONE) projectile mover: modular value for the speed of a projectile 
-4. game controller: allows for win conditions, resarting, quiting, controls UI, spawn power-ups
+4. game controller: allows for win conditions, resarting, quiting, controls UI, hides the cursor, spawn power-ups
 5. (DONE) power-ups: 3 diffrent power-ups that give a random weapond type from weak, strong or traps
 6. contact script:causes projectiles to be destroyed when colliding with each other, objects or exiting the field -- issue currently cannot consistently break bolts

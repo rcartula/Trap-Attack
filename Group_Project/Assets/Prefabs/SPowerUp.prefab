@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33815980313184880}
   - component: {fileID: 23190218236172666}
   - component: {fileID: 65793316844627066}
+  - component: {fileID: 114799744954862560}
   m_Layer: 0
   m_Name: SPowerUp
   m_TagString: SPowerUp
@@ -96,3 +97,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114799744954862560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1725685020231552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c760158787bde4eb8f2880f539e7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 6
