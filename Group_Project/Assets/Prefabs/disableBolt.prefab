@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4164916606179446}
   - component: {fileID: 54120728800591226}
   - component: {fileID: 114257947565155778}
-  - component: {fileID: 65436969150112318}
   - component: {fileID: 114503808178958032}
+  - component: {fileID: 136707041147715446}
   m_Layer: 0
   m_Name: disableBolt
   m_TagString: Disable
@@ -67,8 +67,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1626277427186756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.1302075, y: -6.1237435, z: 2.4322598}
-  m_LocalScale: {x: 1, y: 1, z: 0.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4153200464324986}
   m_Father: {fileID: 0}
@@ -89,7 +89,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 17d7ddc788eff8a458ced9fe1927fe29, type: 2}
+  - {fileID: 2100000, guid: 283d8f818a9868e40b23678b4a6b6853, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,18 +131,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65436969150112318
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1626277427186756}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114257947565155778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -166,3 +154,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feabb4c4842ae4548a3fe69e13d51208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &136707041147715446
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626277427186756}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 0.8
+  m_Direction: 2
+  m_Center: {x: -0.04, y: 0, z: 0}

@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4808102927214312}
   - component: {fileID: 54092415685604348}
   - component: {fileID: 114999399988928526}
-  - component: {fileID: 65267459441639080}
   - component: {fileID: 114583953970844568}
+  - component: {fileID: 136354808552488094}
   m_Layer: 0
   m_Name: Basic_Shot 1
   m_TagString: BasicBolt
@@ -55,7 +55,7 @@ Transform:
   m_GameObject: {fileID: 1131082361487902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 1, z: 0.2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4894932863295588}
   m_Father: {fileID: 0}
@@ -89,7 +89,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 17d7ddc788eff8a458ced9fe1927fe29, type: 2}
+  - {fileID: 2100000, guid: 903c8d3d5a6287442931885d0f3ea075, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,18 +131,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65267459441639080
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1131082361487902}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114583953970844568
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -166,3 +154,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+--- !u!136 &136354808552488094
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1131082361487902}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 0.5
+  m_Direction: 2
+  m_Center: {x: -0.05, y: 0, z: 0.05}

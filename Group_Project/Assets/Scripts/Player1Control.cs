@@ -13,7 +13,9 @@ public class Player1Control : MonoBehaviour
     private float speed = 15;
     public int health;
     public Boundary boundary;
-    public int nextdodge;
+    public int dodgeCooldown;
+    public int shieldCooldown;
+    public GameObject shield;
 
     public GameObject basicshot;
     public GameObject fastshot;
@@ -27,6 +29,8 @@ public class Player1Control : MonoBehaviour
     public float machineFireRate;
 
     private float basicnextFire;
+    private float nextShield;
+    private float nextdodge;
 
     public GameObject slowBolt;
     public GameObject missle;
@@ -86,7 +90,13 @@ public class Player1Control : MonoBehaviour
 
         if (Input.GetButton("Fire4P1")&& Time.time > nextdodge)
         {
+            nextdodge = Time.time + dodgeCooldown;
             StartCoroutine(Dodgeactive());
+        }
+        if (Input.GetButton("Fire3P1")&& Time.time > nextShield)
+        {
+            nextShield = Time.time + shieldCooldown;
+            StartCoroutine(Shieldactive());
         }
         if (basicshotactive)
         {
@@ -291,9 +301,15 @@ public class Player1Control : MonoBehaviour
     }
     public IEnumerator Dodgeactive()
     {
-        speed = 55;
+        speed = 65;
         yield return new WaitForSeconds(.1f);
         speed = 15;
+    }
+    public IEnumerator Shieldactive()
+    {
+        shield.SetActive(true);
+        yield return new WaitForSeconds(4f);
+        shield.SetActive(false);
     }
     public IEnumerator Slowed()
     {

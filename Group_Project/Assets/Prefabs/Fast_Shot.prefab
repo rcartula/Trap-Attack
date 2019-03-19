@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4488407448200660}
   - component: {fileID: 54420603015845122}
   - component: {fileID: 114577505992003788}
-  - component: {fileID: 65902422613556686}
   - component: {fileID: 114709154736841114}
+  - component: {fileID: 136024965356050100}
   m_Layer: 0
   m_Name: Fast_Shot
   m_TagString: BasicBolt
@@ -67,8 +67,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1916543764910988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8367267, y: -3.399373, z: -7.233057}
-  m_LocalScale: {x: 0.5, y: 1, z: 0.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 3, z: 2}
   m_Children:
   - {fileID: 4469810541928242}
   m_Father: {fileID: 0}
@@ -89,7 +89,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 487f3e9262398c04c9b8c1ecd7e5764e, type: 2}
+  - {fileID: 2100000, guid: 006fbb601e5b7e044b4ce82163abbce5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,18 +131,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65902422613556686
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1916543764910988}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114577505992003788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -166,3 +154,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feabb4c4842ae4548a3fe69e13d51208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &136024965356050100
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1916543764910988}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.18
+  m_Height: 1
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: -0.05}

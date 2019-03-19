@@ -12,6 +12,7 @@ TagManager:
   - TreeBreak
   - boundary
   - Disable
+  - Shield
   layers:
   - Default
   - TransparentFX

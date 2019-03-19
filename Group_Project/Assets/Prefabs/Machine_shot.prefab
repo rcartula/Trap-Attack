@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4270310060849636}
   - component: {fileID: 54805668881217570}
   - component: {fileID: 114911162109766446}
-  - component: {fileID: 65477528579459970}
   - component: {fileID: 114565067752819406}
+  - component: {fileID: 136961106263943012}
   m_Layer: 0
   m_Name: Machine_shot
   m_TagString: BasicBolt
@@ -67,8 +67,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1603905968583846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.8980923, y: 4.270052, z: -6.530924}
-  m_LocalScale: {x: 0.5, y: 1, z: 0.2}
+  m_LocalPosition: {x: -4.4802904, y: -1, z: -10.876722}
+  m_LocalScale: {x: 2, y: 3, z: 2}
   m_Children:
   - {fileID: 4012309844931730}
   m_Father: {fileID: 0}
@@ -89,7 +89,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 4b38f2ca6aa627d428f7f13c8fdcc1f8, type: 2}
+  - {fileID: 2100000, guid: 36452a0a5bd67fd479ee6846d7a14bfa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,18 +131,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65477528579459970
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1603905968583846}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114565067752819406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -166,3 +154,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+--- !u!136 &136961106263943012
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1603905968583846}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.4
+  m_Height: 0
+  m_Direction: 2
+  m_Center: {x: -0.03, y: 0, z: -0.1}

@@ -14,6 +14,10 @@ public class DestroyByScripts : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+        if (other.tag == "shield")
+        {
+            Destroy(gameObject);
+        }
         return;
     }
     // Update is called once per frame
