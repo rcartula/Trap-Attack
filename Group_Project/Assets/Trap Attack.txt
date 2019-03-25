@@ -1,0 +1,9 @@
+Trap Attack
+Trap attack is a game where you play as trappers trying to kill each other with animals you have captured and traps. 
+You gain animals through eggs on the ground and can place rocks to protect you or put up a shield.
+Players will have to deal with trees and rocks that will block your animals while trying to take down the other trapper. 
+
+Credits
+TJ Yadisernia: Code & built game in unity
+Ryan Cartularo: Art & Organizer  
+Glenn Hardy: UI

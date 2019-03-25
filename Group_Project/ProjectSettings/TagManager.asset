@@ -13,6 +13,11 @@ TagManager:
   - boundary
   - Disable
   - Shield
+  - Trap
+  - STrap
+  - BeeTrap
+  - TPowerUp
+  - Tree
   layers:
   - Default
   - TransparentFX

@@ -1,28 +1,29 @@
 to do:
 player scripts:
-1. (DONE) player 1 and 2 control, move in 4 directions and 6 buttons to fire, has 10 health and 1 or 3 lives, has a game boundary
-2. prefab placeholders for weapons
-	1. weak weapons: infinite ammo, power-ups give a random weapon, start with weapon 1
+1. (DONE) player 1 and 2 control, move in 4 directions and 6 buttons to fire, has 10 health, has a game boundary
+	player starts with basic shot, 1 bear trap and no strong weapons
+2. (DONE) prefab placeholders for weapons
+	1. (DONE) weak weapons: infinite ammo, power-ups give a random weapon, start with weapon 1
 		1. (DONE) basic shot: 1 damage, moderate fire rate and projectile speed
 		2. (DONE) spread shot: 1 damage per pellet, slow fire rate and moderate projectile speed, shoots 3-5 projectiles
 		3. (DONE) fast shot: 1 damage, lower fire rate, fast projectile speed
-		4. tracking shot:1 damage, slow fire rate and projectile speed, projectile follows the target
+		4. (SKIP) tracking shot:1 damage, slow fire rate and projectile speed, projectile follows the target
 		5. (DONE) machine gun: 1 damage, fast fire rate, lower projectile speed 
-	2. strong weapons: powerful weapons that deal various damage or status effects, limited ammo, gained by power-ups and picking a new one replaces old ones
-		1. (DONE) missle: 5 damage, 3 ammo, slower projectile speed and fire rate
-		2. (DONE) slow shot: 1 damage, 1 ammo, direclty slows the enemy for a time
+	2. (DONE) strong weapons: powerful weapons that deal various damage or status effects, limited ammo, gained by power-ups and picking a new one replaces old ones
+		1. (DONE) missle: 5 damage, 3 ammo, slower fire rate, speed goes up over time
+		2. (DONE) slow shot: 1 damage, 2 ammo, direclty slows the enemy for a time
 		3. (DONE) weapon disable: 1 damage, 1 ammo, disables the enemys weapon for a short time, resets weapons
 		4. (DONE) tree destroyer: 2 damage, 1-2 ammo, destroys tree objects on the map
-		5. orbital: rotates around the player and deals constant damage
-	3. traps: placeable items that cause various effects, gained by power-up with limited ammo, thrown item that launches at a distance
-		1. mines: 3 damage, placeable bomb that causes damage when someone steps on it
-		2. bear traps: 1 damage, placeable trap that immobilizes whoever steps on it
-		3. slow mine: 2 damage, trap that slows whoever activates it for a time
+		5. (SKIP) orbital: rotates around the player and deals constant damage
+	3. (DONE) traps: gained by power-up with limited ammo, thrown item that launches at a distance
+		1. (DONE) Slow mine: 1 damage, when touched the player is slowed - same as slow shot-
+		2. (DONE) bear traps: 1 damage, placeable trap that immobilizes whoever steps on it
+		3. (DONE) bee mine: Causes 1 damage every second someone is in its radius
 	4. defenses
-		1. shield: 5 health, a shield that will follow the player and allows the usage of weapons, timed cooldown
+		1. (DONE) shield: a shield that will follow the player and allows the usage of weapons, timed cooldown
 		2. cover: 5 health, placeable cover that can be placed in multiple directions, timed cooldown seperate from shield
 	5. (DONE) dodge: ability on a cooldown which increases speed for a short time
 3. (DONE) projectile mover: modular value for the speed of a projectile 
-4. game controller: allows for win conditions, resarting, quiting, controls UI, hides the cursor, spawn power-ups
+4. (In-Progress) game controller: allows for win conditions, resarting, quiting, controls UI, hides the cursor, spawn power-ups
 5. (DONE) power-ups: 3 diffrent power-ups that give a random weapond type from weak, strong or traps
-6. contact script:causes projectiles to be destroyed when colliding with each other, objects or exiting the field -- issue currently cannot consistently break bolts
+6. (DONE) contact script: causes projectiles to be destroyed when colliding with each other, objects or exiting the field, strong bolts always destroy weak ones

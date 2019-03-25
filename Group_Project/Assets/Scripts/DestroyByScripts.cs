@@ -14,11 +14,19 @@ public class DestroyByScripts : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-        if (other.tag == "shield")
+        return;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Shield")
         {
             Destroy(gameObject);
         }
-        return;
+        if (other.tag == "BasicBolt")
+        {
+            Destroy(other.gameObject);
+        }
+
     }
     // Update is called once per frame
     void Update () {

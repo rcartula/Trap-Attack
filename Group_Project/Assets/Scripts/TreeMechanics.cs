@@ -24,6 +24,18 @@ public class TreeMechanics : MonoBehaviour {
         {
             return;
         }
+        if (other.tag == "STrap")
+        {
+            return;
+        }
+        if (other.tag == "BeeTrap")
+        {
+            return;
+        }
+        if (other.tag == "Trap")
+        {
+            return;
+        }
         Destroy(other.gameObject);
     }
 }
